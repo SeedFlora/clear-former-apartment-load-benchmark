@@ -1,6 +1,6 @@
 # CLEAR-Former: corrected forecasting protocol
 
-Research code accompanying ICoDiT 2026 submission 78, CLEAR-Former: Reconstructing Gaps and Forecasting Apartment Electrical Load from IoT Power-Meter Streams with a Climatology-Anchored Decompositionâ€“Linear Transformer.
+Research code accompanying ICoDiT 2026 submission 78, CLEAR-Former: Reconstructing Gaps and Forecasting Apartment Electrical Load from IoT Power-Meter Streams with a Climatology-Anchored Decomposition–Linear Transformer.
 
 This public package contains algorithm code, configuration grids, anonymous split definitions and aggregate metrics. It also includes the architecture diagram source. The original one-month apartment meter workbook and every raw or reconstructed load trace, true target array, per-run prediction, job cache and fitted model are excluded. Code availability does not make the meter data public.
 
