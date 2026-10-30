@@ -1,0 +1,834 @@
+{
+  "1h|MLP": [
+    {
+      "config_id": 0,
+      "config": {
+        "hidden": 64,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 6.682795011080229,
+      "val_mae_all_ensemble": 3.0572246431657093,
+      "val_mae_masked_seeds": [
+        7.0828716571514425,
+        7.30165276160607,
+        6.485640892615685,
+        7.2362060546875,
+        6.094825157752404
+      ],
+      "best_epochs": [
+        21,
+        38,
+        18,
+        15,
+        19
+      ],
+      "n_params": 22145
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "hidden": 64,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 6.982307434082031,
+      "val_mae_all_ensemble": 2.920813888748218,
+      "val_mae_masked_seeds": [
+        6.967730595515325,
+        7.832148625300481,
+        5.99057124211238,
+        7.1278522198016825,
+        7.0741412823016825
+      ],
+      "best_epochs": [
+        27,
+        38,
+        20,
+        19,
+        57
+      ],
+      "n_params": 22145
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "hidden": 128,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 6.791267395019531,
+      "val_mae_all_ensemble": 3.0733959518464915,
+      "val_mae_masked_seeds": [
+        7.778240497295673,
+        6.215540959284856,
+        7.107137826772837,
+        6.424746586726262,
+        6.729556157038762
+      ],
+      "best_epochs": [
+        12,
+        15,
+        17,
+        15,
+        13
+      ],
+      "n_params": 48385
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "hidden": 128,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 7.081014193021334,
+      "val_mae_all_ensemble": 3.1141635053348686,
+      "val_mae_masked_seeds": [
+        7.240758455716646,
+        7.050390977125901,
+        7.676929180438702,
+        6.811999981219952,
+        6.775701082669771
+      ],
+      "best_epochs": [
+        30,
+        14,
+        14,
+        10,
+        13
+      ],
+      "n_params": 48385
+    }
+  ],
+  "1h|LSTM": [
+    {
+      "config_id": 0,
+      "config": {
+        "hidden": 24,
+        "layers": 1
+      },
+      "val_mae_masked_ensemble": 6.19708017202524,
+      "val_mae_all_ensemble": 3.234399974304351,
+      "val_mae_masked_seeds": [
+        5.980352548452524,
+        6.257745596078726,
+        6.250174889197717,
+        6.326908405010517,
+        6.824923588679387
+      ],
+      "best_epochs": [
+        33,
+        34,
+        55,
+        42,
+        45
+      ],
+      "n_params": 3769
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "hidden": 24,
+        "layers": 2
+      },
+      "val_mae_masked_ensemble": 6.415872427133413,
+      "val_mae_all_ensemble": 3.2538205731486176,
+      "val_mae_masked_seeds": [
+        6.036844693697416,
+        7.701104384202224,
+        6.040747422438401,
+        6.761784480168269,
+        6.49209712101863
+      ],
+      "best_epochs": [
+        55,
+        12,
+        31,
+        55,
+        41
+      ],
+      "n_params": 8569
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "hidden": 48,
+        "layers": 1
+      },
+      "val_mae_masked_ensemble": 5.425479008601262,
+      "val_mae_all_ensemble": 2.810520274023356,
+      "val_mae_masked_seeds": [
+        4.794186518742488,
+        5.552085876464844,
+        5.831824082594651,
+        5.78676253098708,
+        5.888836200420673
+      ],
+      "best_epochs": [
+        32,
+        34,
+        31,
+        20,
+        28
+      ],
+      "n_params": 12145
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "hidden": 48,
+        "layers": 2
+      },
+      "val_mae_masked_ensemble": 5.560421870304988,
+      "val_mae_all_ensemble": 2.8478330046368483,
+      "val_mae_masked_seeds": [
+        5.214040316068209,
+        5.807425278883714,
+        6.546325096717248,
+        5.096791194035457,
+        6.15545419546274
+      ],
+      "best_epochs": [
+        24,
+        39,
+        15,
+        26,
+        38
+      ],
+      "n_params": 30961
+    }
+  ],
+  "1h|Transformer": [
+    {
+      "config_id": 0,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 7.109769381009615,
+      "val_mae_all_ensemble": 3.036054614921255,
+      "val_mae_masked_seeds": [
+        7.690943791316106,
+        6.923450176532452,
+        7.2281963641826925,
+        7.441532428448017,
+        7.7122368445763225
+      ],
+      "best_epochs": [
+        35,
+        24,
+        54,
+        22,
+        21
+      ],
+      "n_params": 2569
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 7.280330951397236,
+      "val_mae_all_ensemble": 3.131252779896681,
+      "val_mae_masked_seeds": [
+        7.819232647235577,
+        7.832041226900541,
+        7.115729111891526,
+        7.455066387469952,
+        7.602999760554387
+      ],
+      "best_epochs": [
+        26,
+        24,
+        41,
+        41,
+        18
+      ],
+      "n_params": 2569
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 6.0396587665264425,
+      "val_mae_all_ensemble": 2.9054298670697456,
+      "val_mae_masked_seeds": [
+        6.997507535494291,
+        6.279502868652344,
+        5.537760807917668,
+        6.85343757042518,
+        5.80351081261268
+      ],
+      "best_epochs": [
+        12,
+        24,
+        16,
+        10,
+        12
+      ],
+      "n_params": 18305
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 6.337796724759615,
+      "val_mae_all_ensemble": 3.1326278790698328,
+      "val_mae_masked_seeds": [
+        7.587543194110577,
+        5.967535165640024,
+        5.904493478628305,
+        7.29247812124399,
+        5.900108337402344
+      ],
+      "best_epochs": [
+        13,
+        20,
+        16,
+        28,
+        21
+      ],
+      "n_params": 18305
+    }
+  ],
+  "1h|CLEAR-Former": [
+    {
+      "config_id": 0,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 4.759456927959736,
+      "val_mae_all_ensemble": 1.9950367984529238,
+      "val_mae_masked_seeds": [
+        4.781402001014123,
+        5.08001943734976,
+        4.777654794546274,
+        4.773137606107271,
+        4.760616009051983
+      ],
+      "best_epochs": [
+        24,
+        44,
+        35,
+        33,
+        28
+      ],
+      "n_params": 7660
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 4.697394150954026,
+      "val_mae_all_ensemble": 1.9178404025839748,
+      "val_mae_masked_seeds": [
+        4.7625556358924275,
+        4.9589385986328125,
+        4.659812927246094,
+        4.91846935565655,
+        4.621971130371094
+      ],
+      "best_epochs": [
+        48,
+        53,
+        58,
+        47,
+        45
+      ],
+      "n_params": 7660
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "d_model": 40,
+        "heads": 4,
+        "layers": 2,
+        "ff": 80,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 4.737966097318209,
+      "val_mae_all_ensemble": 2.2556662053732697,
+      "val_mae_masked_seeds": [
+        4.485354496882512,
+        4.817791278545673,
+        4.689490098219651,
+        5.006678654597356,
+        4.807407085712139
+      ],
+      "best_epochs": [
+        30,
+        21,
+        18,
+        20,
+        20
+      ],
+      "n_params": 42236
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "d_model": 40,
+        "heads": 4,
+        "layers": 2,
+        "ff": 80,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 4.576526348407452,
+      "val_mae_all_ensemble": 2.211499019753211,
+      "val_mae_masked_seeds": [
+        4.574070857121394,
+        4.7170574481670675,
+        4.776742201585036,
+        4.696469233586238,
+        4.572696392352764
+      ],
+      "best_epochs": [
+        29,
+        23,
+        28,
+        31,
+        29
+      ],
+      "n_params": 42236
+    }
+  ],
+  "day|MLP": [
+    {
+      "config_id": 0,
+      "config": {
+        "hidden": 64,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 17.292776217405823,
+      "val_mae_all_ensemble": 7.773033025113517,
+      "val_mae_masked_seeds": [
+        16.391778397834162,
+        17.51474801425276,
+        16.651374948435816,
+        18.754710844193383,
+        17.227896854795258
+      ],
+      "best_epochs": [
+        15,
+        11,
+        29,
+        15,
+        20
+      ],
+      "n_params": 22904
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "hidden": 64,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 17.756448241485945,
+      "val_mae_all_ensemble": 8.494146136270949,
+      "val_mae_masked_seeds": [
+        17.180921576488977,
+        17.963444326115752,
+        17.52335989064184,
+        18.211692634670214,
+        18.03151400335904
+      ],
+      "best_epochs": [
+        19,
+        15,
+        17,
+        24,
+        24
+      ],
+      "n_params": 22904
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "hidden": 128,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 16.788683704946234,
+      "val_mae_all_ensemble": 7.101327051630338,
+      "val_mae_masked_seeds": [
+        17.58930495689655,
+        16.284270450986664,
+        16.43741734822591,
+        17.366532380553497,
+        16.382634700029747
+      ],
+      "best_epochs": [
+        9,
+        21,
+        8,
+        8,
+        16
+      ],
+      "n_params": 49880
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "hidden": 128,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 17.291325273184942,
+      "val_mae_all_ensemble": 7.958223090142363,
+      "val_mae_masked_seeds": [
+        17.37619382485576,
+        16.707252765523975,
+        17.358857604278914,
+        17.53091470126448,
+        17.531040410885865
+      ],
+      "best_epochs": [
+        18,
+        21,
+        8,
+        8,
+        15
+      ],
+      "n_params": 49880
+    }
+  ],
+  "day|LSTM": [
+    {
+      "config_id": 0,
+      "config": {
+        "hidden": 24,
+        "layers": 1
+      },
+      "val_mae_masked_ensemble": 14.567766255345838,
+      "val_mae_all_ensemble": 5.964335574263027,
+      "val_mae_masked_seeds": [
+        14.90070264092807,
+        14.104422207536368,
+        14.946937473340967,
+        14.693962184862158,
+        14.370978563681415
+      ],
+      "best_epochs": [
+        43,
+        33,
+        23,
+        39,
+        36
+      ],
+      "n_params": 4344
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "hidden": 24,
+        "layers": 2
+      },
+      "val_mae_masked_ensemble": 14.890602462593167,
+      "val_mae_all_ensemble": 7.202148730733973,
+      "val_mae_masked_seeds": [
+        15.187599664446951,
+        16.571291211007654,
+        14.300280340786639,
+        14.309645291032462,
+        14.237862027924637
+      ],
+      "best_epochs": [
+        20,
+        11,
+        22,
+        35,
+        19
+      ],
+      "n_params": 9144
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "hidden": 48,
+        "layers": 1
+      },
+      "val_mae_masked_ensemble": 14.445420100771148,
+      "val_mae_all_ensemble": 5.882546547784264,
+      "val_mae_masked_seeds": [
+        14.927131565137842,
+        14.984127746231254,
+        13.752136888175174,
+        13.576107814394195,
+        15.222714128165409
+      ],
+      "best_epochs": [
+        14,
+        18,
+        21,
+        28,
+        22
+      ],
+      "n_params": 13272
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "hidden": 48,
+        "layers": 2
+      },
+      "val_mae_masked_ensemble": 14.410896257422436,
+      "val_mae_all_ensemble": 6.8885961830022335,
+      "val_mae_masked_seeds": [
+        14.663160652949893,
+        14.374217285507028,
+        14.015161974676724,
+        14.14462766976192,
+        15.185121514331335
+      ],
+      "best_epochs": [
+        10,
+        7,
+        28,
+        24,
+        13
+      ],
+      "n_params": 32088
+    }
+  ],
+  "day|Transformer": [
+    {
+      "config_id": 0,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 17.289430947139344,
+      "val_mae_all_ensemble": 10.371832221992774,
+      "val_mae_masked_seeds": [
+        16.70760130608219,
+        18.437643204612293,
+        15.950414591822131,
+        18.080875133645947,
+        17.805520244028376
+      ],
+      "best_epochs": [
+        5,
+        2,
+        5,
+        7,
+        5
+      ],
+      "n_params": 11424
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 17.234543416691924,
+      "val_mae_all_ensemble": 10.40840284787477,
+      "val_mae_masked_seeds": [
+        16.413189065867456,
+        18.370908408329406,
+        15.754084225358634,
+        18.09857774054867,
+        18.104588168790972
+      ],
+      "best_epochs": [
+        5,
+        2,
+        5,
+        7,
+        7
+      ],
+      "n_params": 11424
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 15.945001185625449,
+      "val_mae_all_ensemble": 9.447426129848406,
+      "val_mae_masked_seeds": [
+        14.582114822563083,
+        15.68908577403803,
+        14.280993406800018,
+        17.661875976913276,
+        18.403761019651917
+      ],
+      "best_epochs": [
+        9,
+        4,
+        7,
+        1,
+        10
+      ],
+      "n_params": 35992
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 15.828317488747082,
+      "val_mae_all_ensemble": 9.597092758743548,
+      "val_mae_masked_seeds": [
+        14.715058951542295,
+        15.702718449735093,
+        13.809160079079113,
+        17.817406753013874,
+        17.98279501377851
+      ],
+      "best_epochs": [
+        9,
+        4,
+        7,
+        1,
+        9
+      ],
+      "n_params": 35992
+    }
+  ],
+  "day|CLEAR-Former": [
+    {
+      "config_id": 0,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 13.833718179286212,
+      "val_mae_all_ensemble": 5.7890023222982645,
+      "val_mae_masked_seeds": [
+        12.509876952774222,
+        14.343812657498765,
+        14.521719000805383,
+        14.296776957895563,
+        13.834253903093009
+      ],
+      "best_epochs": [
+        19,
+        13,
+        16,
+        11,
+        10
+      ],
+      "n_params": 11800
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 13.803693837132947,
+      "val_mae_all_ensemble": 5.183908751131001,
+      "val_mae_masked_seeds": [
+        12.806806235477842,
+        14.50132010448938,
+        14.206519422859982,
+        14.086115957676679,
+        13.659807928677264
+      ],
+      "best_epochs": [
+        19,
+        14,
+        23,
+        11,
+        21
+      ],
+      "n_params": 11800
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "d_model": 40,
+        "heads": 4,
+        "layers": 2,
+        "ff": 80,
+        "dropout": 0.15
+      },
+      "val_mae_masked_ensemble": 14.556370132270901,
+      "val_mae_all_ensemble": 6.456359027075277,
+      "val_mae_masked_seeds": [
+        14.95105050624102,
+        15.05428195821828,
+        13.499830794060367,
+        14.66696004757936,
+        14.96530927460769
+      ],
+      "best_epochs": [
+        8,
+        5,
+        37,
+        14,
+        9
+      ],
+      "n_params": 48584
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "d_model": 40,
+        "heads": 4,
+        "layers": 2,
+        "ff": 80,
+        "dropout": 0.3
+      },
+      "val_mae_masked_ensemble": 14.503244816571817,
+      "val_mae_all_ensemble": 6.8365589544785985,
+      "val_mae_masked_seeds": [
+        14.450599319633396,
+        14.793389375182404,
+        14.350928383312006,
+        14.227464390897202,
+        14.829316764042295
+      ],
+      "best_epochs": [
+        8,
+        8,
+        9,
+        7,
+        9
+      ],
+      "n_params": 48584
+    }
+  ]
+}

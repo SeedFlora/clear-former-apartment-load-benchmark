@@ -1,0 +1,465 @@
+{
+  "lengths": [
+    1,
+    6,
+    24,
+    47,
+    96,
+    216
+  ],
+  "step_h": 6,
+  "methods": [
+    "LOCF",
+    "Linear",
+    "HourMean",
+    "PrevDay",
+    "Kalman",
+    "Ours"
+  ],
+  "target_summary": {
+    "1": {
+      "LOCF": {
+        "n_placements": 68,
+        "mae_mean": 6.132352941176471,
+        "mae_sd": 3.843600658604773,
+        "mae_median": 6.0,
+        "mae_q25": 3.0,
+        "mae_q75": 9.0,
+        "rmse_mean": 6.132352941176471,
+        "bias_mean": -2.014705882352941,
+        "scored_hours_total": 68,
+        "ours_better_in": 45
+      },
+      "Linear": {
+        "n_placements": 68,
+        "mae_mean": 3.4558823529411766,
+        "mae_sd": 2.4122437906139536,
+        "mae_median": 3.0,
+        "mae_q25": 1.5,
+        "mae_q75": 4.625,
+        "rmse_mean": 3.4558823529411766,
+        "bias_mean": 0.4117647058823529,
+        "scored_hours_total": 68,
+        "ours_better_in": 36
+      },
+      "HourMean": {
+        "n_placements": 68,
+        "mae_mean": 17.34375,
+        "mae_sd": 10.85812348500751,
+        "mae_median": 16.84375,
+        "mae_q25": 9.46875,
+        "mae_q75": 22.328125,
+        "rmse_mean": 17.34375,
+        "bias_mean": 0.0,
+        "scored_hours_total": 68,
+        "ours_better_in": 61
+      },
+      "PrevDay": {
+        "n_placements": 68,
+        "mae_mean": 19.151654411764707,
+        "mae_sd": 16.487926369682445,
+        "mae_median": 14.0,
+        "mae_q25": 6.75,
+        "mae_q75": 31.25,
+        "rmse_mean": 19.151654411764707,
+        "bias_mean": -1.239889705882353,
+        "scored_hours_total": 68,
+        "ours_better_in": 57
+      },
+      "Kalman": {
+        "n_placements": 68,
+        "mae_mean": 3.7237204297415185,
+        "mae_sd": 2.7842873945751974,
+        "mae_median": 3.5053329653550094,
+        "mae_q25": 1.5183709754558734,
+        "mae_q75": 5.221392617507945,
+        "rmse_mean": 3.7237204297415185,
+        "bias_mean": -0.1051972062807155,
+        "scored_hours_total": 68,
+        "ours_better_in": 39
+      },
+      "Ours": {
+        "n_placements": 68,
+        "mae_mean": 3.580666089965398,
+        "mae_sd": 2.467132176460925,
+        "mae_median": 3.283088235294116,
+        "mae_q25": 1.422794117647058,
+        "mae_q75": 5.197610294117652,
+        "rmse_mean": 3.580666089965398,
+        "bias_mean": 0.12867647058823528,
+        "scored_hours_total": 68,
+        "ours_better_in": null
+      }
+    },
+    "6": {
+      "LOCF": {
+        "n_placements": 65,
+        "mae_mean": 11.34153846153846,
+        "mae_sd": 5.005001077981731,
+        "mae_median": 10.833333333333334,
+        "mae_q25": 7.666666666666667,
+        "mae_q75": 15.0,
+        "rmse_mean": 12.66861829966613,
+        "bias_mean": -2.2338461538461534,
+        "scored_hours_total": 389,
+        "ours_better_in": 59
+      },
+      "Linear": {
+        "n_placements": 65,
+        "mae_mean": 7.948864468864469,
+        "mae_sd": 3.5052524037391963,
+        "mae_median": 7.238095238095241,
+        "mae_q25": 5.0,
+        "mae_q75": 10.26190476190476,
+        "rmse_mean": 8.888618411828796,
+        "bias_mean": -2.038241758241758,
+        "scored_hours_total": 389,
+        "ours_better_in": 49
+      },
+      "HourMean": {
+        "n_placements": 65,
+        "mae_mean": 17.014174836601306,
+        "mae_sd": 9.452421203933984,
+        "mae_median": 15.0,
+        "mae_q25": 10.17892156862745,
+        "mae_q75": 21.153799019607845,
+        "rmse_mean": 17.89932574778308,
+        "bias_mean": 0.31260746606334855,
+        "scored_hours_total": 389,
+        "ours_better_in": 64
+      },
+      "PrevDay": {
+        "n_placements": 65,
+        "mae_mean": 19.29384049773756,
+        "mae_sd": 15.472003366255457,
+        "mae_median": 13.864583333333334,
+        "mae_q25": 6.666666666666667,
+        "mae_q75": 30.166666666666668,
+        "rmse_mean": 20.616702386899842,
+        "bias_mean": -1.1030712669683258,
+        "scored_hours_total": 389,
+        "ours_better_in": 59
+      },
+      "Kalman": {
+        "n_placements": 65,
+        "mae_mean": 5.0099785178772605,
+        "mae_sd": 2.301311979323127,
+        "mae_median": 4.531702031909465,
+        "mae_q25": 3.4403515375332128,
+        "mae_q75": 6.399196094924155,
+        "rmse_mean": 5.807133394650561,
+        "bias_mean": -0.079867434743073,
+        "scored_hours_total": 389,
+        "ours_better_in": 36
+      },
+      "Ours": {
+        "n_placements": 65,
+        "mae_mean": 4.696777185233067,
+        "mae_sd": 2.307649712281746,
+        "mae_median": 4.353816526610643,
+        "mae_q25": 3.091211484593842,
+        "mae_q75": 5.895570728291314,
+        "rmse_mean": 5.466487739648628,
+        "bias_mean": -0.055723712561945145,
+        "scored_hours_total": 389,
+        "ours_better_in": null
+      }
+    },
+    "24": {
+      "LOCF": {
+        "n_placements": 56,
+        "mae_mean": 15.767792443064181,
+        "mae_sd": 5.412367291694915,
+        "mae_median": 15.541666666666668,
+        "mae_q25": 11.470108695652174,
+        "mae_q75": 19.010416666666668,
+        "rmse_mean": 18.68150383317016,
+        "bias_mean": -0.4006858178053833,
+        "scored_hours_total": 1340,
+        "ours_better_in": 50
+      },
+      "Linear": {
+        "n_placements": 56,
+        "mae_mean": 12.492396480331264,
+        "mae_sd": 3.8538027700925452,
+        "mae_median": 11.172644927536233,
+        "mae_q25": 9.855,
+        "mae_q75": 15.040416666666667,
+        "rmse_mean": 14.893288632072975,
+        "bias_mean": -1.8325491718426503,
+        "scored_hours_total": 1340,
+        "ours_better_in": 41
+      },
+      "HourMean": {
+        "n_placements": 56,
+        "mae_mean": 15.8698916500477,
+        "mae_sd": 5.834203535523568,
+        "mae_median": 13.79652777777778,
+        "mae_q25": 11.41209028221796,
+        "mae_q75": 19.41490757761438,
+        "rmse_mean": 17.7065407421136,
+        "bias_mean": 2.3417097522885966,
+        "scored_hours_total": 1340,
+        "ours_better_in": 48
+      },
+      "PrevDay": {
+        "n_placements": 56,
+        "mae_mean": 16.734550426828342,
+        "mae_sd": 10.735443838210111,
+        "mae_median": 13.625,
+        "mae_q25": 7.604166666666666,
+        "mae_q75": 24.5625,
+        "rmse_mean": 19.30492515246983,
+        "bias_mean": 1.932116239838327,
+        "scored_hours_total": 1340,
+        "ours_better_in": 47
+      },
+      "Kalman": {
+        "n_placements": 56,
+        "mae_mean": 9.59700418177472,
+        "mae_sd": 5.55008524560979,
+        "mae_median": 8.565325043730349,
+        "mae_q25": 6.1595624102240585,
+        "mae_q75": 10.777665411001307,
+        "rmse_mean": 11.320726631752091,
+        "bias_mean": 0.17744767783975585,
+        "scored_hours_total": 1340,
+        "ours_better_in": 27
+      },
+      "Ours": {
+        "n_placements": 56,
+        "mae_mean": 9.491839427800105,
+        "mae_sd": 5.351361604020345,
+        "mae_median": 8.272512254901962,
+        "mae_q25": 5.615706521739131,
+        "mae_q75": 11.87988562091503,
+        "rmse_mean": 11.140960167136,
+        "bias_mean": 0.19835172837250825,
+        "scored_hours_total": 1340,
+        "ours_better_in": null
+      }
+    },
+    "47": {
+      "LOCF": {
+        "n_placements": 49,
+        "mae_mean": 17.46906681266401,
+        "mae_sd": 6.285694853327984,
+        "mae_median": 16.617021276595743,
+        "mae_q25": 11.872340425531915,
+        "mae_q75": 21.638297872340427,
+        "rmse_mean": 20.625202549169234,
+        "bias_mean": -0.41350601295097134,
+        "scored_hours_total": 2295,
+        "ours_better_in": 42
+      },
+      "Linear": {
+        "n_placements": 49,
+        "mae_mean": 14.474792449357171,
+        "mae_sd": 4.289738955425386,
+        "mae_median": 13.952445652173916,
+        "mae_q25": 11.558510638297872,
+        "mae_q75": 16.150709219858154,
+        "rmse_mean": 17.360710011294003,
+        "bias_mean": -2.4991592960033224,
+        "scored_hours_total": 2295,
+        "ours_better_in": 40
+      },
+      "HourMean": {
+        "n_placements": 49,
+        "mae_mean": 15.725932791181755,
+        "mae_sd": 4.122638716231824,
+        "mae_median": 15.341757246376815,
+        "mae_q25": 12.353623188405797,
+        "mae_q75": 18.41401752190238,
+        "rmse_mean": 17.80120824260686,
+        "bias_mean": 3.620388220373388,
+        "scored_hours_total": 2295,
+        "ours_better_in": 46
+      },
+      "PrevDay": {
+        "n_placements": 49,
+        "mae_mean": 17.827119231464224,
+        "mae_sd": 9.683800664848446,
+        "mae_median": 15.97872340425532,
+        "mae_q25": 10.0,
+        "mae_q75": 26.659574468085108,
+        "rmse_mean": 20.834674853528316,
+        "bias_mean": 2.562929035761259,
+        "scored_hours_total": 2295,
+        "ours_better_in": 41
+      },
+      "Kalman": {
+        "n_placements": 49,
+        "mae_mean": 11.187344996823958,
+        "mae_sd": 4.940793536516092,
+        "mae_median": 10.405882545558558,
+        "mae_q25": 7.376508424938897,
+        "mae_q75": 13.91148936398999,
+        "rmse_mean": 13.52069950462657,
+        "bias_mean": 0.7400089050436943,
+        "scored_hours_total": 2295,
+        "ours_better_in": 36
+      },
+      "Ours": {
+        "n_placements": 49,
+        "mae_mean": 10.961857424349416,
+        "mae_sd": 5.0687506942256215,
+        "mae_median": 10.264112879194228,
+        "mae_q25": 7.298097826086958,
+        "mae_q75": 13.16788247213779,
+        "rmse_mean": 13.319476625112681,
+        "bias_mean": 1.1145075910633846,
+        "scored_hours_total": 2295,
+        "ours_better_in": null
+      }
+    },
+    "96": {
+      "LOCF": {
+        "n_placements": 41,
+        "mae_mean": 20.061968564704443,
+        "mae_sd": 7.965043088626065,
+        "mae_median": 19.770833333333332,
+        "mae_q25": 13.458333333333334,
+        "mae_q75": 24.0625,
+        "rmse_mean": 23.42647765259265,
+        "bias_mean": -4.655793064979521,
+        "scored_hours_total": 3497,
+        "ours_better_in": 33
+      },
+      "Linear": {
+        "n_placements": 41,
+        "mae_mean": 15.590746308481974,
+        "mae_sd": 5.137768132782091,
+        "mae_median": 14.384879725085911,
+        "mae_q25": 11.097449810092241,
+        "mae_q75": 17.83136190992946,
+        "rmse_mean": 18.7217713355323,
+        "bias_mean": -1.9633440556787278,
+        "scored_hours_total": 3497,
+        "ours_better_in": 35
+      },
+      "HourMean": {
+        "n_placements": 41,
+        "mae_mean": 14.875171350732641,
+        "mae_sd": 3.09373245521614,
+        "mae_median": 15.33013302486987,
+        "mae_q25": 12.263945578231292,
+        "mae_q75": 17.244982448107447,
+        "rmse_mean": 17.1025428741257,
+        "bias_mean": 4.226047403354784,
+        "scored_hours_total": 3497,
+        "ours_better_in": 33
+      },
+      "PrevDay": {
+        "n_placements": 41,
+        "mae_mean": 17.632015877102297,
+        "mae_sd": 5.453153375858257,
+        "mae_median": 16.726315789473684,
+        "mae_q25": 14.178947368421053,
+        "mae_q75": 20.876602564102562,
+        "rmse_mean": 21.019190176637412,
+        "bias_mean": -5.147282510976808,
+        "scored_hours_total": 3497,
+        "ours_better_in": 32
+      },
+      "Kalman": {
+        "n_placements": 41,
+        "mae_mean": 12.837067524910308,
+        "mae_sd": 6.2360378341112135,
+        "mae_median": 10.349708793014404,
+        "mae_q25": 7.820362405777405,
+        "mae_q75": 15.398029192828224,
+        "rmse_mean": 15.674056504822499,
+        "bias_mean": 0.21225108128714423,
+        "scored_hours_total": 3497,
+        "ours_better_in": 25
+      },
+      "Ours": {
+        "n_placements": 41,
+        "mae_mean": 12.653388243613543,
+        "mae_sd": 6.060876715301839,
+        "mae_median": 10.387002796443923,
+        "mae_q25": 8.257941841121433,
+        "mae_q75": 16.14931735646942,
+        "rmse_mean": 15.391351241412844,
+        "bias_mean": 0.2365195715429732,
+        "scored_hours_total": 3497,
+        "ours_better_in": null
+      }
+    },
+    "216": {
+      "LOCF": {
+        "n_placements": 29,
+        "mae_mean": 21.683159328796553,
+        "mae_sd": 9.083985421195036,
+        "mae_median": 18.023809523809526,
+        "mae_q25": 15.195266272189349,
+        "mae_q75": 26.153846153846153,
+        "rmse_mean": 25.608106736513257,
+        "bias_mean": 2.8656369482305584,
+        "scored_hours_total": 5308,
+        "ours_better_in": 21
+      },
+      "Linear": {
+        "n_placements": 29,
+        "mae_mean": 18.48435425219271,
+        "mae_sd": 5.7096083954148815,
+        "mae_median": 16.334069231593613,
+        "mae_q25": 14.440187603959316,
+        "mae_q75": 19.85872440214872,
+        "rmse_mean": 22.10085468905986,
+        "bias_mean": 1.9169638884722129,
+        "scored_hours_total": 5308,
+        "ours_better_in": 20
+      },
+      "HourMean": {
+        "n_placements": 29,
+        "mae_mean": 17.125979650870928,
+        "mae_sd": 2.366688589676764,
+        "mae_median": 17.917261904761904,
+        "mae_q25": 14.285852713178295,
+        "mae_q75": 18.72261904761905,
+        "rmse_mean": 20.361202179983216,
+        "bias_mean": 11.918189729361929,
+        "scored_hours_total": 5308,
+        "ours_better_in": 17
+      },
+      "PrevDay": {
+        "n_placements": 29,
+        "mae_mean": 20.786416617501988,
+        "mae_sd": 9.147188419665095,
+        "mae_median": 18.71627906976744,
+        "mae_q25": 12.636904761904763,
+        "mae_q75": 25.40177514792899,
+        "rmse_mean": 25.131527340824913,
+        "bias_mean": 7.538268206991605,
+        "scored_hours_total": 5308,
+        "ours_better_in": 14
+      },
+      "Kalman": {
+        "n_placements": 29,
+        "mae_mean": 17.818298379706977,
+        "mae_sd": 5.067278759035448,
+        "mae_median": 17.041054202158584,
+        "mae_q25": 14.163834782369792,
+        "mae_q75": 20.020613459470557,
+        "rmse_mean": 21.10162780750146,
+        "bias_mean": 4.338173300384499,
+        "scored_hours_total": 5308,
+        "ours_better_in": 21
+      },
+      "Ours": {
+        "n_placements": 29,
+        "mae_mean": 17.324322913858627,
+        "mae_sd": 5.091694245975403,
+        "mae_median": 16.20635069481656,
+        "mae_q25": 12.71821922317314,
+        "mae_q75": 19.430471403424256,
+        "rmse_mean": 20.565039656126842,
+        "bias_mean": 4.328387687969113,
+        "scored_hours_total": 5308,
+        "ours_better_in": null
+      }
+    }
+  }
+}

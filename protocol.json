@@ -1,0 +1,269 @@
+{
+  "description": "Corrected main protocol, expressed in anonymous zero-based hourly grid indices; no meter values or per-run prediction arrays.",
+  "source_files": [
+    "revision/common.py",
+    "revision/train.py",
+    "revision/jobs.py",
+    "aggregate-results/selection.json"
+  ],
+  "indexing": {
+    "grid_index": "zero-based hours from start of private recording",
+    "input_hours": 24,
+    "grid_hours": 720,
+    "test_target_start_index": 672,
+    "test_target_end_index_inclusive": 719,
+    "test_target_hours": 48,
+    "window_stride_hours": 1,
+    "horizons_hours": [
+      1,
+      24
+    ]
+  },
+  "splitting": {
+    "pool_rule": "Keep windows with last target index < 672, sorted by origin. Main scheme=recon permits reconstructed input/training target values.",
+    "validation_rule": "Latest max(8, floor(0.15 * pool_size)) windows.",
+    "purge_rule": "Remove training windows whose last target index reaches or exceeds the first validation target index.",
+    "test_rule": "Windows with origin+1 >= 672; inputs and all target positions must be observed.",
+    "validation_scoring": "Observed target positions only; reconstructed target positions excluded from validation loss and model selection.",
+    "test_scoring": "Observed targets only; overlapping day-ahead windows retained as defined by source.",
+    "main_split_counts": {
+      "1h": {
+        "horizon_hours": 1,
+        "parts": {
+          "train": {
+            "n": 551,
+            "fully_observed": 310,
+            "observed_target_hours": 358,
+            "first_origin": 23,
+            "last_origin": 573
+          },
+          "val": {
+            "n": 97,
+            "fully_observed": 2,
+            "observed_target_hours": 26,
+            "first_origin": 574,
+            "last_origin": 670
+          },
+          "test": {
+            "n": 48,
+            "fully_observed": 48,
+            "observed_target_hours": 48,
+            "first_origin": 671,
+            "last_origin": 718
+          }
+        },
+        "n_purged": 0
+      },
+      "day": {
+        "horizon_hours": 24,
+        "parts": {
+          "train": {
+            "n": 509,
+            "fully_observed": 241,
+            "observed_target_hours": 8316,
+            "first_origin": 23,
+            "last_origin": 531
+          },
+          "val": {
+            "n": 93,
+            "fully_observed": 0,
+            "observed_target_hours": 348,
+            "first_origin": 555,
+            "last_origin": 647
+          },
+          "test": {
+            "n": 25,
+            "fully_observed": 25,
+            "observed_target_hours": 600,
+            "first_origin": 671,
+            "last_origin": 695
+          }
+        },
+        "n_purged": 23
+      }
+    }
+  },
+  "fitted_quantities": {
+    "reconstruction": "Hour-of-day climatology, trend and clip bounds fitted on observed indices < 672; no noise term.",
+    "feature_and_target_scalers": "Fit over all 672 pre-test grid hours, observed and reconstructed; validation hours are included.",
+    "static_feature_scaler": "Fit over training plus validation window inputs; no target columns.",
+    "statistical_baselines": "SARIMA, Holt-Winters and Prophet refit at each test origin on history available through that origin, including earlier observed test hours.",
+    "learning_models": "Fitted after validation selection; no updates using test targets."
+  },
+  "model_selection": {
+    "objective": "Validation MAE on observed target positions",
+    "neural_ensemble_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "grid_parameters": {
+      "MLP": [
+        {
+          "hidden": 64,
+          "dropout": 0.15
+        },
+        {
+          "hidden": 64,
+          "dropout": 0.3
+        },
+        {
+          "hidden": 128,
+          "dropout": 0.15
+        },
+        {
+          "hidden": 128,
+          "dropout": 0.3
+        }
+      ],
+      "LSTM": [
+        {
+          "hidden": 24,
+          "layers": 1
+        },
+        {
+          "hidden": 24,
+          "layers": 2
+        },
+        {
+          "hidden": 48,
+          "layers": 1
+        },
+        {
+          "hidden": 48,
+          "layers": 2
+        }
+      ],
+      "Transformer": [
+        {
+          "d_model": 16,
+          "heads": 1,
+          "layers": 1,
+          "ff": 24,
+          "dropout": 0.15
+        },
+        {
+          "d_model": 16,
+          "heads": 1,
+          "layers": 1,
+          "ff": 24,
+          "dropout": 0.3
+        },
+        {
+          "d_model": 32,
+          "heads": 4,
+          "layers": 2,
+          "ff": 64,
+          "dropout": 0.15
+        },
+        {
+          "d_model": 32,
+          "heads": 4,
+          "layers": 2,
+          "ff": 64,
+          "dropout": 0.3
+        }
+      ],
+      "CLEAR-Former": [
+        {
+          "d_model": 16,
+          "heads": 1,
+          "layers": 1,
+          "ff": 24,
+          "dropout": 0.15
+        },
+        {
+          "d_model": 16,
+          "heads": 1,
+          "layers": 1,
+          "ff": 24,
+          "dropout": 0.3
+        },
+        {
+          "d_model": 40,
+          "heads": 4,
+          "layers": 2,
+          "ff": 80,
+          "dropout": 0.15
+        },
+        {
+          "d_model": 40,
+          "heads": 4,
+          "layers": 2,
+          "ff": 80,
+          "dropout": 0.3
+        }
+      ],
+      "SVR": [
+        {
+          "C": 1.0
+        },
+        {
+          "C": 10.0
+        },
+        {
+          "C": 100.0
+        }
+      ],
+      "RandomForest": [
+        {
+          "max_depth": 6
+        },
+        {
+          "max_depth": 12
+        },
+        {
+          "max_depth": null
+        }
+      ],
+      "XGBoost": [
+        {
+          "max_depth": 2
+        },
+        {
+          "max_depth": 4
+        },
+        {
+          "max_depth": 6
+        }
+      ]
+    },
+    "selected_parameters_file": "aggregate-results/selection.json"
+  },
+  "training": {
+    "feature_count": 13,
+    "static_feature_count": 41,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "max_epochs": 200,
+    "early_stopping_patience": 25,
+    "gradient_clip_norm": 3.0,
+    "loss": "SmoothL1Loss on standardized targets",
+    "scheduler": {
+      "name": "ReduceLROnPlateau",
+      "factor": 0.5,
+      "patience": 8
+    },
+    "original_neural_worker_device": "cuda"
+  },
+  "release_contents": [
+    "algorithm code",
+    "configuration grids",
+    "anonymous split definitions and aggregate counts",
+    "selected aggregate metrics",
+    "architecture diagram source"
+  ],
+  "not_released": [
+    "private raw meter workbook",
+    "raw or reconstructed time series",
+    "per-run target or prediction arrays",
+    "fitted model weights",
+    "subject identifiers or building identity",
+    "internal notes"
+  ],
+  "license": "No new code or data licence assigned; none found in source project."
+}

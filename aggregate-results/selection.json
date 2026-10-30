@@ -1,0 +1,231 @@
+{
+  "neural": {
+    "1h|MLP": {
+      "selected_config_id": 0,
+      "selected_config": {
+        "hidden": 64,
+        "dropout": 0.15
+      }
+    },
+    "1h|LSTM": {
+      "selected_config_id": 2,
+      "selected_config": {
+        "hidden": 48,
+        "layers": 1
+      }
+    },
+    "1h|Transformer": {
+      "selected_config_id": 2,
+      "selected_config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.15
+      }
+    },
+    "1h|CLEAR-Former": {
+      "selected_config_id": 3,
+      "selected_config": {
+        "d_model": 40,
+        "heads": 4,
+        "layers": 2,
+        "ff": 80,
+        "dropout": 0.3
+      }
+    },
+    "day|MLP": {
+      "selected_config_id": 2,
+      "selected_config": {
+        "hidden": 128,
+        "dropout": 0.15
+      }
+    },
+    "day|LSTM": {
+      "selected_config_id": 3,
+      "selected_config": {
+        "hidden": 48,
+        "layers": 2
+      }
+    },
+    "day|Transformer": {
+      "selected_config_id": 3,
+      "selected_config": {
+        "d_model": 32,
+        "heads": 4,
+        "layers": 2,
+        "ff": 64,
+        "dropout": 0.3
+      }
+    },
+    "day|CLEAR-Former": {
+      "selected_config_id": 1,
+      "selected_config": {
+        "d_model": 16,
+        "heads": 1,
+        "layers": 1,
+        "ff": 24,
+        "dropout": 0.3
+      }
+    }
+  },
+  "ml": {
+    "1h|SVR": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "C": 1.0
+          },
+          "val_mae_masked": 7.519680889752489
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "C": 10.0
+          },
+          "val_mae_masked": 7.430433897119114
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "C": 100.0
+          },
+          "val_mae_masked": 7.399924809385761
+        }
+      ],
+      "selected": 2
+    },
+    "1h|RandomForest": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "max_depth": 6
+          },
+          "val_mae_masked": 5.13330319491398
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "max_depth": 12
+          },
+          "val_mae_masked": 4.939871358268287
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "max_depth": null
+          },
+          "val_mae_masked": 4.943085178975182
+        }
+      ],
+      "selected": 1
+    },
+    "1h|XGBoost": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "max_depth": 2
+          },
+          "val_mae_masked": 5.24415764441857
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "max_depth": 4
+          },
+          "val_mae_masked": 5.0167412391075725
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "max_depth": 6
+          },
+          "val_mae_masked": 4.73152336707482
+        }
+      ],
+      "selected": 2
+    },
+    "day|SVR": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "C": 1.0
+          },
+          "val_mae_masked": 14.392987094868026
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "C": 10.0
+          },
+          "val_mae_masked": 14.229312238523425
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "C": 100.0
+          },
+          "val_mae_masked": 14.187019557422483
+        }
+      ],
+      "selected": 2
+    },
+    "day|RandomForest": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "max_depth": 6
+          },
+          "val_mae_masked": 15.357323693557401
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "max_depth": 12
+          },
+          "val_mae_masked": 15.09875570469599
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "max_depth": null
+          },
+          "val_mae_masked": 15.106096476507501
+        }
+      ],
+      "selected": 1
+    },
+    "day|XGBoost": {
+      "grid": [
+        {
+          "config_id": 0,
+          "config": {
+            "max_depth": 2
+          },
+          "val_mae_masked": 11.98504208970344
+        },
+        {
+          "config_id": 1,
+          "config": {
+            "max_depth": 4
+          },
+          "val_mae_masked": 12.65097778144924
+        },
+        {
+          "config_id": 2,
+          "config": {
+            "max_depth": 6
+          },
+          "val_mae_masked": 12.968441447992435
+        }
+      ],
+      "selected": 0
+    }
+  },
+  "elapsed_sec": 620.1
+}

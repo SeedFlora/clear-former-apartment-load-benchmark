@@ -1,0 +1,23 @@
+# Never publish the private meter source or any run-generated meter-level artifacts.
+*.xlsx
+*.xls
+*.csv
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.joblib
+*.db
+/data/
+/results/
+/revision/results/
+/revision/figdata/
+/revision/logs/
+/revision/figures/*.pdf
+/revision/figures/*.png
+__pycache__/
+*.py[cod]
+.venv/
+.env
