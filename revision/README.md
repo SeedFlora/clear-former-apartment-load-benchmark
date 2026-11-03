@@ -84,8 +84,9 @@ variant without the feature MLP f_z.
 
 Input data: `../../Data Kelistrikan 1 Bulan.xlsx` (457 rows, SHA-256
 `6cdb55d3d00a8470274d20aae5434b788a2ff4f0c67bf05ccdbd34a0bf0aa161`), read by
-`../src/data.py`. It is not part of the public release; it is available from the
-authors on request with the building manager's permission.
+`../src/data.py`. The unchanged source workbook is included in the public release at
+`../data/Data Kelistrikan 1 Bulan.xlsx`; the reader also supports the legacy
+local path above.
 
 `run_sensitivity.py` uses `robust.py`, which runs every job in a fresh process,
 stores each result as it finishes and retries jobs that fail when another

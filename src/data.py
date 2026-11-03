@@ -33,7 +33,9 @@ import openpyxl
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)                       # paper_build/
 PROJECT = os.path.dirname(ROOT)                    # listrik apart/
-XLSX = os.path.join(PROJECT, "Data Kelistrikan 1 Bulan.xlsx")
+XLSX = os.path.join(ROOT, "data", "Data Kelistrikan 1 Bulan.xlsx")
+if not os.path.isfile(XLSX):
+    XLSX = os.path.join(PROJECT, "Data Kelistrikan 1 Bulan.xlsx")
 DATA_DIR = os.path.join(ROOT, "data")
 
 TARGET = "active_power_total"

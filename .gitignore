@@ -1,4 +1,4 @@
-# Never publish the private meter source or any run-generated meter-level artifacts.
+# The original workbook in data/ is published; ignore other source or generated artifacts.
 *.xlsx
 *.xls
 *.csv
@@ -21,3 +21,9 @@ __pycache__/
 *.py[cod]
 .venv/
 .env
+
+# Include only the published source workbook and its documentation.
+!/data/
+/data/*
+!/data/Data Kelistrikan 1 Bulan.xlsx
+!/data/README.md
